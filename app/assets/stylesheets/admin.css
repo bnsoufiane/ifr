@@ -1,0 +1,8 @@
+//= require ../javascripts/lib/jquery-ui-sortable/jquery-ui.min
+//= require ../javascripts/lib/jquery-ui-sortable/jquery-ui.structure
+//= require ../javascripts/bootstrap/dist/css/bootstrap
+//= require fonts/font-awesome-4/css/font-awesome.min
+
+//= require lib/tabletools/css/dataTables.tableTools
+//= require admin/style
+//= require admin/ifr

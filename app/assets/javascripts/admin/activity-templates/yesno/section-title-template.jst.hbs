@@ -1,0 +1,29 @@
+<div class="title-editor">
+	<input type="text" name="title"
+		   required
+	placeholder="Enter section title" />
+
+	<span class="btn-group">
+		<a href="javascript:void(0);"
+		   class="accept-edit-title btn btn-primary">
+			<i class="fa fa-check"></i>
+		</a>
+		<a href="javascript:void(0);"
+		   class="cancel-edit-title btn btn-danger">
+			<i class="fa fa-ban"></i>
+		</a>
+	</span>
+</div>
+<h3 class="title-header">
+	<span rv-text="section:title"></span>
+	<a href="javascript:void(0);" class="edit-title"
+	   data-toggle="tooltip" data-placement="bottom"
+	   title="Edit Title">
+		<i class="fa fa-pencil-square-o"></i>
+	</a>
+	<a href="javascript:void(0);" class="remove-section"
+	   data-toggle="tooltip" data-placement="bottom"
+	   title="Remove Section">
+		<i class="fa fa-minus-square-o"></i>
+	</a>
+</h3>

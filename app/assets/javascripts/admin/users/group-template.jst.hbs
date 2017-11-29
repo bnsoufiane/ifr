@@ -1,0 +1,12 @@
+<div class="col-sm-6">
+	<select class="form-control" name="group_ids[]" class="groups-select">
+		{{#each groups}}
+			<option value="{{ id }}">{{ name }}</option>
+		{{/each}}
+	</select>
+</div>
+<div class="col-sm-1">
+	<a href="javascript:void(0);" class="add-option"><i class="fa fa-plus-square"></i></a>
+	&nbsp;
+	<a href="javascript:void(0);" class="remove-option"><i class="fa fa-minus-square"></i></a>
+</div>

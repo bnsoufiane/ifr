@@ -1,0 +1,80 @@
+<form action="{{ URL::route('activities.store') }}" method="POST">
+
+	<input type="hidden" name="activity_id" value="{{ $current_activity->id }}" />
+
+    <div class="options">
+        <div class="pageWrap whatBoss newInner clearfix">
+            <div class="wrap clearfix">
+                <div class="pageHead">
+                    <?php
+                    $title_array = explode(' ', $lesson_title);
+                    $title1 = "";
+                    $title2 = "";
+
+                    $n = count($title_array);
+                    $m = ($n%2) ?($n / 2)-1 : ($n / 2);
+                    $m = ($n==1)?1 :$m;
+                    for ($i = 0; $i < $n; $i++) {
+                        if ($i < $m) {
+                            $title1.= ($title1 == "") ? $title_array[$i] : " " . $title_array[$i];
+                        } else {
+                            $title2.= ($title2 == "") ? $title_array[$i] : " " . $title_array[$i];
+                        }
+                    }
+                    ?>
+
+                    <div class="headTitle"><?php echo $title1; ?></div>
+                    <div class="headSubTitle"><?php echo $title2; ?></div>
+
+<<<<<<< HEAD
+
+
+                    <img src="<?php echo asset('/user-static/images/'.$current_activity->illustration_image); ?>" alt="">
+=======
+                    <?php
+                if (!empty($current_activiy->illustration_image)) {
+                    ?>
+                    <img src="<?php echo asset('/user-static/images/' . $current_activiy->illustration_image); ?>" alt="">
+                    <?php
+                }
+                ?>
+>>>>>>> c4eba97de19302e37142e2f1af55a44c84074ffc
+                </div>
+
+                <div class="mainContentWrapper">
+                    <div class="mainContent">
+                        <h2><?php echo $current_activity->title; ?></h2>
+                        <?php
+                        $i = 0;
+                        $n = (count($options) / 2) + 1;
+
+                        foreach ($options as $item) {
+                            if ($i % $n == 0) {
+                                echo '<ul class="customRadios">';
+                            }
+                            ?>
+                            <li>
+                                <input type="radio" class="customRadio"
+									   name="select_option_id" value="{{ $item->id }}}}">
+                                <div class="labelWrap"><label>{{ $item->option }}</label></div>
+                            </li>
+                            <?php
+                            if (($i + 1) % $n == 0) {
+                                echo '</ul>';
+                            }
+                            $i++;
+                        }
+                        ?>
+                    </div>
+                </div>
+            </div>
+
+            <div class="wrap ta-c clearfix">
+                <button type="submit" class="continueBtn" tabindex="-1">
+                    <span>Save and Continue</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+</form>

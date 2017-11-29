@@ -1,0 +1,82 @@
+<div class="panel-heading">
+    <h4 class="panel-title">
+		<a href="javascript:void(0);" class="activity-title">
+			<span class="sort-handle"><i class="fa fa-angle-right"></i></span> &nbsp;
+			<span rv-text="model:title"></span>
+		</a>
+    </h4>
+</div>
+
+<div activity_id="{{ id }}" class="panel-collapse collapse">
+    <div class="panel-body">
+        <form class="form-horizontal" action="#" style="border-radius: 0px;">
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Title</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" value="{{ title }}" name="title" rv-value="model:title" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Image to the Right of the Title</label>
+                <div class="col-sm-6">
+                    <div class="dropzone" data-upload-extensions="jpg,jpeg,webp,gif,png">
+                        <div class="btn btn-md btn-success btn-rad">Choose file</div>
+                        <div class="preview"></div>
+                        <input type="hidden" name="illustration_image" rv-value="model:illustration_image" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Background Image</label>
+                <div class="col-sm-6">
+                    <div class="dropzone" data-upload-extensions="jpg,jpeg,webp,gif,png">
+                        <div class="btn btn-md btn-success btn-rad">Choose file</div>
+                        <div class="preview"></div>
+                        <input type="hidden" name="background_image" rv-value="model:background_image" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Feedback</label>
+                <div class="col-sm-6">
+                    <input type="text" class="form-control" rv-value="model:feedback" />
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">Audio Version</label>
+                <div class="col-sm-6">
+                    <div class="dropzone" data-upload-extensions="ogg,ogv,mp3,mp4,aac,flv,fla,avi,mov,flac,avi,mkv,mka,mpg,mpeg,webm">
+                        <div class="btn btn-md btn-success btn-rad">Choose file</div>
+                        <div class="preview"></div>
+                        <input type="hidden" name="audio_version" rv-value="model:audio_version" />
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="col-sm-3 control-label">PDF Version for Printing</label>
+                <div class="col-sm-6">
+                    <div class="dropzone" data-upload-extensions="pdf">
+                        <div class="btn btn-md btn-success btn-rad">Choose file</div>
+                        <div class="preview"></div>
+                        <input type="hidden" name="pdf_version" rv-value="model:pdf_version" />
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="activity-template">
+			</div>
+
+            <div class="form-group">
+				<div class="col-sm-offset-3 col-sm-6">
+					<button class="btn btn-default show-preview">Preview</button>
+				</div>
+            </div>
+        </form>
+    </div>
+</div>
